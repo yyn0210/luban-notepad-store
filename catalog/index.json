@@ -1,0 +1,11 @@
+{
+  "$schema": "../schemas/catalog.schema.json",
+  "catalog_version": 1,
+  "repository": {
+    "id": "luban-notepad-official",
+    "name": "Luban Notepad Plugin Store",
+    "homepage": "https://github.com/yyn0210/luban-notepad-store"
+  },
+  "generated_at": "2026-10-31T00:00:00Z",
+  "plugins": []
+}

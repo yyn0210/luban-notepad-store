@@ -1,0 +1,37 @@
+{
+  "$schema": "../schemas/plugin.schema.json",
+  "id": "com.example.hello",
+  "name": "Hello",
+  "description": "Example plugin entry for the Luban Notepad plugin store.",
+  "publisher": "example",
+  "verified": false,
+  "icon": "https://example.com/icon.svg",
+  "tags": ["example", "text"],
+  "permissions": ["filesystem"],
+  "source": "https://github.com/example/luban-plugin-hello/tree/v1.0.0",
+  "homepage": "https://github.com/example/luban-plugin-hello",
+  "license": "MIT",
+  "latest_version": "1.0.0",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "api_version": 1,
+      "released_at": "2026-10-31T00:00:00Z",
+      "release_notes": "Initial release.",
+      "artifacts": [
+        {
+          "target": "universal",
+          "url": "https://github.com/example/luban-plugin-hello/releases/download/v1.0.0/com.example.hello-1.0.0.zip",
+          "sha256": "0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef",
+          "size": 12345
+        }
+      ]
+    }
+  ],
+  "localizations": {
+    "zh-CN": {
+      "name": "示例插件",
+      "description": "鲁班记事本插件商店的示例插件条目。"
+    }
+  }
+}
