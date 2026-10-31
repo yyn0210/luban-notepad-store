@@ -5,7 +5,11 @@
   "description": "Generated catalog read by Luban Notepad. Edit plugins/*.json and regenerate instead of editing this file by hand.",
   "type": "object",
   "additionalProperties": false,
-  "required": ["catalog_version", "repository", "plugins"],
+  "required": [
+    "catalog_version",
+    "repository",
+    "plugins"
+  ],
   "properties": {
     "$schema": {
       "type": "string"
@@ -16,7 +20,10 @@
     "repository": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["id", "name"],
+      "required": [
+        "id",
+        "name"
+      ],
       "properties": {
         "id": {
           "type": "string",
@@ -71,7 +78,12 @@
     "artifact": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["target", "url", "sha256", "size"],
+      "required": [
+        "target",
+        "url",
+        "sha256",
+        "size"
+      ],
       "properties": {
         "target": {
           "$ref": "#/$defs/target"
@@ -92,7 +104,10 @@
     "version": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["version", "artifacts"],
+      "required": [
+        "version",
+        "artifacts"
+      ],
       "properties": {
         "version": {
           "$ref": "#/$defs/semver"
@@ -120,7 +135,9 @@
     "localization": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["name"],
+      "required": [
+        "name"
+      ],
       "properties": {
         "name": {
           "type": "string",
@@ -135,8 +152,17 @@
     "plugin": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["id", "name", "publisher", "latest_version", "versions"],
+      "required": [
+        "id",
+        "name",
+        "publisher",
+        "latest_version",
+        "versions"
+      ],
       "properties": {
+        "$schema": {
+          "type": "string"
+        },
         "id": {
           "type": "string",
           "pattern": "^[a-z0-9][a-z0-9._-]*$",
