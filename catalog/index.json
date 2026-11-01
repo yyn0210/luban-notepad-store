@@ -6,7 +6,7 @@
     "name": "Luban Notepad Plugin Store",
     "homepage": "https://github.com/yyn0210/luban-notepad-store"
   },
-  "generated_at": "2026-11-01T11:11:33Z",
+  "generated_at": "2026-11-01T11:37:33Z",
   "plugins": [
     {
       "$schema": "../schemas/plugin.schema.json",
@@ -21,11 +21,25 @@
         "gfm"
       ],
       "permissions": [],
-      "source": "https://github.com/yyn0210/luban-notepad-plugin-markdown/tree/v1.0.0",
+      "source": "https://github.com/yyn0210/luban-notepad-plugin-markdown/tree/v1.0.1",
       "homepage": "https://github.com/yyn0210/luban-notepad-plugin-markdown",
       "license": "MulanPubL-2.0",
-      "latest_version": "1.0.0",
+      "latest_version": "1.0.1",
       "versions": [
+        {
+          "version": "1.0.1",
+          "api_version": 1,
+          "released_at": "2026-11-01T11:35:13Z",
+          "release_notes": "Fit wide tables to the 640px preview panel: columns shrink and cells truncate instead of wrapping the box drawing.",
+          "artifacts": [
+            {
+              "target": "universal",
+              "url": "https://github.com/yyn0210/luban-notepad-plugin-markdown/releases/download/v1.0.1/io.github.yyn0210.markdown-preview-1.0.1.zip",
+              "sha256": "b084c9dc2ad49fca8c6335718ac0009df60bdff1cbf6014fdb5f57df7f78f2d9",
+              "size": 19763
+            }
+          ]
+        },
         {
           "version": "1.0.0",
           "api_version": 1,
