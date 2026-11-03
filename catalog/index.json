@@ -6,13 +6,13 @@
     "name": "Luban Notepad Plugin Store",
     "homepage": "https://github.com/yyn0210/luban-notepad-store"
   },
-  "generated_at": "2026-11-03T06:36:14Z",
+  "generated_at": "2026-11-03T06:56:29Z",
   "plugins": [
     {
       "$schema": "../schemas/plugin.schema.json",
       "id": "io.github.yyn0210.json-preview",
       "name": "JSON Preview",
-      "description": "Tree-style JSON preview with node folding, JSONPath extraction, metadata analysis, syntax colors, error locations, duplicate-key hints, JSON Lines support and format/minify/validate commands. Refreshes while you edit on Luban Notepad 1.0.0-preview.2+; older hosts show a plain-text preview.",
+      "description": "Tree-style JSON preview with a toolbar for node folding, JSONPath and metadata, plus syntax colors, error locations, duplicate-key hints, JSON Lines support and format/minify/validate commands. Refreshes while you edit on Luban Notepad 1.0.0-preview.2+; older hosts show a plain-text preview.",
       "publisher": "yyn0210",
       "tags": [
         "json",
@@ -25,11 +25,25 @@
         "metadata"
       ],
       "permissions": [],
-      "source": "https://github.com/yyn0210/luban-notepad-plugin-json-preview/tree/v1.1.0",
+      "source": "https://github.com/yyn0210/luban-notepad-plugin-json-preview/tree/v1.1.1",
       "homepage": "https://github.com/yyn0210/luban-notepad-plugin-json-preview",
       "license": "MulanPubL-2.0",
-      "latest_version": "1.1.0",
+      "latest_version": "1.1.1",
       "versions": [
+        {
+          "version": "1.1.1",
+          "api_version": 1,
+          "released_at": "2026-11-03T06:55:55Z",
+          "release_notes": "Moves node folding, JSONPath and metadata into three clickable action rows at the top of the preview panel. The Folding row toggles between Fold All and Expand All, JSONPath shows the path at the cursor or extracts the selected expression, and Metadata opens the inspector. These commands are no longer contributed to the Plugins menu; they remain available from the command palette and keyboard shortcuts.",
+          "artifacts": [
+            {
+              "target": "universal",
+              "url": "https://github.com/yyn0210/luban-notepad-plugin-json-preview/releases/download/v1.1.1/io.github.yyn0210.json-preview-1.1.1.zip",
+              "sha256": "24580bf33d5e7fe07174b1cd48e4b74af5370258cd1d2d9fdc1064bbb61ae128",
+              "size": 31788
+            }
+          ]
+        },
         {
           "version": "1.1.0",
           "api_version": 1,
@@ -76,7 +90,7 @@
       "localizations": {
         "zh-CN": {
           "name": "JSON 预览",
-          "description": "在右侧面板以树状结构预览 JSON：节点折叠（光标处切换、全部折叠/展开、初始折叠层级）、JSONPath 显示与提取、元数据分析、语法配色、错误行列定位、重复键提示和 JSON Lines 自动识别，以及格式化、压缩和校验命令。在 Luban Notepad 1.0.0-preview.2 及以上版本中随编辑自动刷新；旧版本显示纯文本预览。"
+          "description": "在右侧面板以树状结构预览 JSON，顶部提供折叠、JSONPath 和元数据操作行，并支持语法配色、错误行列定位、重复键提示、JSON Lines 自动识别，以及格式化、压缩和校验命令。在 Luban Notepad 1.0.0-preview.2 及以上版本中随编辑自动刷新；旧版本显示纯文本预览。"
         }
       }
     },
