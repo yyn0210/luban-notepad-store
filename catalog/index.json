@@ -6,7 +6,7 @@
     "name": "Luban Notepad Plugin Store",
     "homepage": "https://github.com/yyn0210/luban-notepad-store"
   },
-  "generated_at": "2026-11-03T05:54:41Z",
+  "generated_at": "2026-11-03T05:59:51Z",
   "plugins": [
     {
       "$schema": "../schemas/plugin.schema.json",
@@ -22,11 +22,25 @@
         "jsonl"
       ],
       "permissions": [],
-      "source": "https://github.com/yyn0210/luban-notepad-plugin-json-preview/tree/v1.0.0",
+      "source": "https://github.com/yyn0210/luban-notepad-plugin-json-preview/tree/v1.0.1",
       "homepage": "https://github.com/yyn0210/luban-notepad-plugin-json-preview",
       "license": "MulanPubL-2.0",
-      "latest_version": "1.0.0",
+      "latest_version": "1.0.1",
       "versions": [
+        {
+          "version": "1.0.1",
+          "api_version": 1,
+          "released_at": "2026-11-03T05:59:38Z",
+          "release_notes": "Fix Format Document and Minify Document when the cursor is near the end of a document that becomes shorter: the host selection is now explicitly reset to the document start.",
+          "artifacts": [
+            {
+              "target": "universal",
+              "url": "https://github.com/yyn0210/luban-notepad-plugin-json-preview/releases/download/v1.0.1/io.github.yyn0210.json-preview-1.0.1.zip",
+              "sha256": "827a03e45b9debe628a3c58254fe6ba80abe071fac142e827b5c0607243d5a87",
+              "size": 18982
+            }
+          ]
+        },
         {
           "version": "1.0.0",
           "api_version": 1,
