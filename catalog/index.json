@@ -6,8 +6,49 @@
     "name": "Luban Notepad Plugin Store",
     "homepage": "https://github.com/yyn0210/luban-notepad-store"
   },
-  "generated_at": "2026-11-01T11:37:33Z",
+  "generated_at": "2026-11-03T05:54:41Z",
   "plugins": [
+    {
+      "$schema": "../schemas/plugin.schema.json",
+      "id": "io.github.yyn0210.json-preview",
+      "name": "JSON Preview",
+      "description": "Tree-style JSON preview in a side panel with syntax colors, error locations, duplicate-key hints, JSON Lines support and format/minify/validate commands. Refreshes while you edit on Luban Notepad 1.0.0-preview.2+; older hosts show a plain-text preview.",
+      "publisher": "yyn0210",
+      "tags": [
+        "json",
+        "preview",
+        "formatter",
+        "editor",
+        "jsonl"
+      ],
+      "permissions": [],
+      "source": "https://github.com/yyn0210/luban-notepad-plugin-json-preview/tree/v1.0.0",
+      "homepage": "https://github.com/yyn0210/luban-notepad-plugin-json-preview",
+      "license": "MulanPubL-2.0",
+      "latest_version": "1.0.0",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "api_version": 1,
+          "released_at": "2026-11-03T05:54:30Z",
+          "release_notes": "Initial release. Strict RFC 8259 parser with key order and duplicate keys preserved, tree preview with theme colors, error line/column with source context and caret, duplicate-key hints, JSON Lines detection, and JSON Preview / Format / Minify / Validate commands. Refreshes while you edit on 1.0.0-preview.2+; older hosts render the plain-text fallback and refresh manually.",
+          "artifacts": [
+            {
+              "target": "universal",
+              "url": "https://github.com/yyn0210/luban-notepad-plugin-json-preview/releases/download/v1.0.0/io.github.yyn0210.json-preview-1.0.0.zip",
+              "sha256": "39ddcacb721d1717cf2aeb298e62fa1816b23aa514ffffe0f904b636a88d8028",
+              "size": 18831
+            }
+          ]
+        }
+      ],
+      "localizations": {
+        "zh-CN": {
+          "name": "JSON 预览",
+          "description": "在右侧面板以树状结构预览 JSON：语法配色、错误行列定位、重复键提示、JSON Lines 自动识别，以及格式化、压缩和校验命令。在 Luban Notepad 1.0.0-preview.2 及以上版本中随编辑自动刷新；旧版本显示纯文本预览。"
+        }
+      }
+    },
     {
       "$schema": "../schemas/plugin.schema.json",
       "id": "io.github.yyn0210.markdown-preview",
