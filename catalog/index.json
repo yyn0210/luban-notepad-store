@@ -6,13 +6,13 @@
     "name": "Luban Notepad Plugin Store",
     "homepage": "https://github.com/yyn0210/luban-notepad-store"
   },
-  "generated_at": "2026-11-03T06:56:29Z",
+  "generated_at": "2026-11-04T14:11:03Z",
   "plugins": [
     {
       "$schema": "../schemas/plugin.schema.json",
       "id": "io.github.yyn0210.json-preview",
       "name": "JSON Preview",
-      "description": "Tree-style JSON preview with a toolbar for node folding, JSONPath and metadata, plus syntax colors, error locations, duplicate-key hints, JSON Lines support and format/minify/validate commands. Refreshes while you edit on Luban Notepad 1.0.0-preview.2+; older hosts show a plain-text preview.",
+      "description": "Tree-style JSON preview with a compact action bar for folding, JSONPath and metadata, a clean monospace tree with gutter fold markers, syntax colors, error locations, duplicate-key hints, JSON Lines support and format/minify/validate commands. Refreshes while you edit on Luban Notepad 1.0.0-preview.2+.",
       "publisher": "yyn0210",
       "tags": [
         "json",
@@ -25,11 +25,25 @@
         "metadata"
       ],
       "permissions": [],
-      "source": "https://github.com/yyn0210/luban-notepad-plugin-json-preview/tree/v1.1.1",
+      "source": "https://github.com/yyn0210/luban-notepad-plugin-json-preview/tree/v1.2.0",
       "homepage": "https://github.com/yyn0210/luban-notepad-plugin-json-preview",
       "license": "MulanPubL-2.0",
-      "latest_version": "1.1.1",
+      "latest_version": "1.2.0",
       "versions": [
+        {
+          "version": "1.2.0",
+          "api_version": 1,
+          "released_at": "2026-11-04T14:10:16Z",
+          "release_notes": "Matches compact JSON viewer styling: borderless monospace tree lines, fold triangles in the indent gutter, key alignment with scalar siblings, a file-and-root summary in the panel title and no duplicate summary line. On hosts with panel API v2, Fold All/Expand All, JSONPath and Metadata become flat header actions that keep the panel scroll position; older hosts keep the three in-content fallback rows.",
+          "artifacts": [
+            {
+              "target": "universal",
+              "url": "https://github.com/yyn0210/luban-notepad-plugin-json-preview/releases/download/v1.2.0/io.github.yyn0210.json-preview-1.2.0.zip",
+              "sha256": "45785b6081d106423b08364ef9474303d5b860bb96a4033031da5eeea6d4441d",
+              "size": 32780
+            }
+          ]
+        },
         {
           "version": "1.1.1",
           "api_version": 1,
@@ -90,7 +104,7 @@
       "localizations": {
         "zh-CN": {
           "name": "JSON 预览",
-          "description": "在右侧面板以树状结构预览 JSON，顶部提供折叠、JSONPath 和元数据操作行，并支持语法配色、错误行列定位、重复键提示、JSON Lines 自动识别，以及格式化、压缩和校验命令。在 Luban Notepad 1.0.0-preview.2 及以上版本中随编辑自动刷新；旧版本显示纯文本预览。"
+          "description": "在右侧面板以树状结构预览 JSON，采用紧凑等宽树形样式和缩进槽折叠三角，标题栏提供折叠、JSONPath 和元数据操作，并支持语法配色、错误行列定位、重复键提示、JSON Lines 自动识别，以及格式化、压缩和校验命令。在 Luban Notepad 1.0.0-preview.2 及以上版本中随编辑自动刷新。"
         }
       }
     },
