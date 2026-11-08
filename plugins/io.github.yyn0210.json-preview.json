@@ -2,7 +2,7 @@
   "$schema": "../schemas/plugin.schema.json",
   "id": "io.github.yyn0210.json-preview",
   "name": "JSON Preview",
-  "description": "Tree-style JSON preview with a compact action bar for folding, JSONPath and metadata, a clean monospace tree with gutter fold markers, syntax colors, error locations, duplicate-key hints, JSON Lines support and format/minify/validate commands. Refreshes while you edit on Luban Notepad 1.0.0-preview.2+.",
+  "description": "Tree-style JSON preview with a compact action bar for folding, JSONPath and metadata, a clean monospace tree with gutter fold markers, syntax colors, error locations, duplicate-key hints, JSON Lines support and format/minify/validate commands. Refreshes while you edit; requires a plugin API v2 host (v1 hosts are not supported).",
   "publisher": "yyn0210",
   "tags": [
     "json",
@@ -14,12 +14,28 @@
     "folding",
     "metadata"
   ],
-  "permissions": [],
-  "source": "https://github.com/yyn0210/luban-notepad-plugin-json-preview/tree/v1.2.0",
+  "permissions": [
+    "filesystem"
+  ],
+  "source": "https://github.com/yyn0210/luban-notepad-plugin-json-preview/tree/v2.0.0",
   "homepage": "https://github.com/yyn0210/luban-notepad-plugin-json-preview",
   "license": "MulanPubL-2.0",
-  "latest_version": "1.2.0",
+  "latest_version": "2.0.0",
   "versions": [
+    {
+      "version": "2.0.0",
+      "api_version": 2,
+      "released_at": "2026-11-08T16:01:49Z",
+      "release_notes": "Rewritten for plugin API v2; v1 hosts cannot install or activate it. The single-file main.lua is split into json.parser, display, path, tree and meta modules loaded via sandboxed require. Folding becomes per-node: every container line carries its fold path as command args, and folding refreshes the panel in place with luban.panel.refresh, preserving scroll position; Ctrl+Alt+J stays as the cursor-based keyboard path. Fold state uses in-memory exact structural paths with a state.json fallback in the plugin data directory, which adds the filesystem permission. on_edit invalidates fold state when the root structure changes; header action buttons become the only form.",
+      "artifacts": [
+        {
+          "target": "universal",
+          "url": "https://github.com/yyn0210/luban-notepad-plugin-json-preview/releases/download/v2.0.0/io.github.yyn0210.json-preview-2.0.0.zip",
+          "sha256": "857ca2cb7d84a27d84a1a16910bf49a80df46c2ff27bbdaae561b21a0f0b9d29",
+          "size": 40916
+        }
+      ]
+    },
     {
       "version": "1.2.0",
       "api_version": 1,
@@ -94,7 +110,7 @@
   "localizations": {
     "zh-CN": {
       "name": "JSON 预览",
-      "description": "在右侧面板以树状结构预览 JSON，采用紧凑等宽树形样式和缩进槽折叠三角，标题栏提供折叠、JSONPath 和元数据操作，并支持语法配色、错误行列定位、重复键提示、JSON Lines 自动识别，以及格式化、压缩和校验命令。在 Luban Notepad 1.0.0-preview.2 及以上版本中随编辑自动刷新。"
+      "description": "在右侧面板以树状结构预览 JSON，采用紧凑等宽树形样式和缩进槽折叠三角，标题栏提供折叠、JSONPath 和元数据操作，并支持语法配色、错误行列定位、重复键提示、JSON Lines 自动识别，以及格式化、压缩和校验命令。随编辑自动刷新；需要插件 API v2 宿主，不再支持 v1 宿主。"
     }
   }
 }

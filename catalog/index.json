@@ -6,13 +6,13 @@
     "name": "Luban Notepad Plugin Store",
     "homepage": "https://github.com/yyn0210/luban-notepad-store"
   },
-  "generated_at": "2026-11-04T14:11:03Z",
+  "generated_at": "2026-11-08T16:22:39Z",
   "plugins": [
     {
       "$schema": "../schemas/plugin.schema.json",
       "id": "io.github.yyn0210.json-preview",
       "name": "JSON Preview",
-      "description": "Tree-style JSON preview with a compact action bar for folding, JSONPath and metadata, a clean monospace tree with gutter fold markers, syntax colors, error locations, duplicate-key hints, JSON Lines support and format/minify/validate commands. Refreshes while you edit on Luban Notepad 1.0.0-preview.2+.",
+      "description": "Tree-style JSON preview with a compact action bar for folding, JSONPath and metadata, a clean monospace tree with gutter fold markers, syntax colors, error locations, duplicate-key hints, JSON Lines support and format/minify/validate commands. Refreshes while you edit; requires a plugin API v2 host (v1 hosts are not supported).",
       "publisher": "yyn0210",
       "tags": [
         "json",
@@ -24,12 +24,28 @@
         "folding",
         "metadata"
       ],
-      "permissions": [],
-      "source": "https://github.com/yyn0210/luban-notepad-plugin-json-preview/tree/v1.2.0",
+      "permissions": [
+        "filesystem"
+      ],
+      "source": "https://github.com/yyn0210/luban-notepad-plugin-json-preview/tree/v2.0.0",
       "homepage": "https://github.com/yyn0210/luban-notepad-plugin-json-preview",
       "license": "MulanPubL-2.0",
-      "latest_version": "1.2.0",
+      "latest_version": "2.0.0",
       "versions": [
+        {
+          "version": "2.0.0",
+          "api_version": 2,
+          "released_at": "2026-11-08T16:01:49Z",
+          "release_notes": "Rewritten for plugin API v2; v1 hosts cannot install or activate it. The single-file main.lua is split into json.parser, display, path, tree and meta modules loaded via sandboxed require. Folding becomes per-node: every container line carries its fold path as command args, and folding refreshes the panel in place with luban.panel.refresh, preserving scroll position; Ctrl+Alt+J stays as the cursor-based keyboard path. Fold state uses in-memory exact structural paths with a state.json fallback in the plugin data directory, which adds the filesystem permission. on_edit invalidates fold state when the root structure changes; header action buttons become the only form.",
+          "artifacts": [
+            {
+              "target": "universal",
+              "url": "https://github.com/yyn0210/luban-notepad-plugin-json-preview/releases/download/v2.0.0/io.github.yyn0210.json-preview-2.0.0.zip",
+              "sha256": "857ca2cb7d84a27d84a1a16910bf49a80df46c2ff27bbdaae561b21a0f0b9d29",
+              "size": 40916
+            }
+          ]
+        },
         {
           "version": "1.2.0",
           "api_version": 1,
@@ -104,7 +120,7 @@
       "localizations": {
         "zh-CN": {
           "name": "JSON 预览",
-          "description": "在右侧面板以树状结构预览 JSON，采用紧凑等宽树形样式和缩进槽折叠三角，标题栏提供折叠、JSONPath 和元数据操作，并支持语法配色、错误行列定位、重复键提示、JSON Lines 自动识别，以及格式化、压缩和校验命令。在 Luban Notepad 1.0.0-preview.2 及以上版本中随编辑自动刷新。"
+          "description": "在右侧面板以树状结构预览 JSON，采用紧凑等宽树形样式和缩进槽折叠三角，标题栏提供折叠、JSONPath 和元数据操作，并支持语法配色、错误行列定位、重复键提示、JSON Lines 自动识别，以及格式化、压缩和校验命令。随编辑自动刷新；需要插件 API v2 宿主，不再支持 v1 宿主。"
         }
       }
     },
@@ -112,7 +128,7 @@
       "$schema": "../schemas/plugin.schema.json",
       "id": "io.github.yyn0210.markdown-preview",
       "name": "Markdown Preview",
-      "description": "Rendered Markdown preview in a side panel with GFM tables, task lists, quotes and syntax-highlighted code blocks. Refreshes while you edit on Luban Notepad 1.0.0-preview.2+; older hosts show a plain-text preview.",
+      "description": "Rendered Markdown preview in a side panel with GFM tables, task lists, quotes and syntax-highlighted code blocks, plus heading folding and click-to-source. Refreshes while you edit; requires a plugin API v2 host (v1 hosts are not supported).",
       "publisher": "yyn0210",
       "tags": [
         "markdown",
@@ -121,11 +137,25 @@
         "gfm"
       ],
       "permissions": [],
-      "source": "https://github.com/yyn0210/luban-notepad-plugin-markdown/tree/v1.0.1",
+      "source": "https://github.com/yyn0210/luban-notepad-plugin-markdown/tree/v2.0.0",
       "homepage": "https://github.com/yyn0210/luban-notepad-plugin-markdown",
       "license": "MulanPubL-2.0",
-      "latest_version": "1.0.1",
+      "latest_version": "2.0.0",
       "versions": [
+        {
+          "version": "2.0.0",
+          "api_version": 2,
+          "released_at": "2026-11-08T15:27:44Z",
+          "release_notes": "Rewritten for plugin API v2; v1 hosts are no longer supported (activation requires luban.version 2). Code is split into parser, inline, renderer, highlight and text modules loaded via sandboxed require. Adds heading fold indicators with a markdown.toggle-heading command and click-to-source via markdown.goto-source, plus an on_edit parse cache so fold toggles and manual refreshes reuse the parsed block tree. Panel id, existing command ids and settings keys are unchanged, so an in-place update keeps user settings.",
+          "artifacts": [
+            {
+              "target": "universal",
+              "url": "https://github.com/yyn0210/luban-notepad-plugin-markdown/releases/download/v2.0.0/io.github.yyn0210.markdown-preview-2.0.0.zip",
+              "sha256": "313c18c3c3acbd3a40b948d4af1fb91516ee99fba0b5243b197083906b8d7334",
+              "size": 26498
+            }
+          ]
+        },
         {
           "version": "1.0.1",
           "api_version": 1,
@@ -158,7 +188,7 @@
       "localizations": {
         "zh-CN": {
           "name": "Markdown 预览",
-          "description": "在右侧面板渲染 Markdown：支持 GFM 表格、任务列表、引用和语法高亮代码块。在 Luban Notepad 1.0.0-preview.2 及以上版本中随编辑自动刷新；旧版本显示纯文本预览。"
+          "description": "在右侧面板渲染 Markdown：支持 GFM 表格、任务列表、引用和语法高亮代码块，以及标题折叠与点击跳转源码。随编辑自动刷新；需要插件 API v2 宿主，不再支持 v1 宿主。"
         }
       }
     }
