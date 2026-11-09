@@ -17,11 +17,25 @@
   "permissions": [
     "filesystem"
   ],
-  "source": "https://github.com/yyn0210/luban-notepad-plugin-json-preview/tree/v2.0.0",
+  "source": "https://github.com/yyn0210/luban-notepad-plugin-json-preview/tree/v2.0.1",
   "homepage": "https://github.com/yyn0210/luban-notepad-plugin-json-preview",
   "license": "MulanPubL-2.0",
-  "latest_version": "2.0.0",
+  "latest_version": "2.0.1",
   "versions": [
+    {
+      "version": "2.0.1",
+      "api_version": 2,
+      "released_at": "2026-11-09T12:40:31Z",
+      "release_notes": "Adds zh-CN localization for the plugin name, description, commands, preview and inspector panel titles, and settings. The preview toolbar shows Chinese labels for Fold All/Expand All, JSONPath and Metadata through label_i18n, and panel titles follow luban.i18n when available. Older hosts ignore the additive keys and keep the English text. Translated text needs Luban Notepad 1.0.0-preview.20 or newer.",
+      "artifacts": [
+        {
+          "target": "universal",
+          "url": "https://github.com/yyn0210/luban-notepad-plugin-json-preview/releases/download/v2.0.1/io.github.yyn0210.json-preview-2.0.1.zip",
+          "sha256": "2865ab79398a78cfcb34948501e4edec88974a06bbfab2ed09959d4951959cda",
+          "size": 42626
+        }
+      ]
+    },
     {
       "version": "2.0.0",
       "api_version": 2,

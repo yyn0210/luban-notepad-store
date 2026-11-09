@@ -11,11 +11,25 @@
     "gfm"
   ],
   "permissions": [],
-  "source": "https://github.com/yyn0210/luban-notepad-plugin-markdown/tree/v2.1.0",
+  "source": "https://github.com/yyn0210/luban-notepad-plugin-markdown/tree/v2.1.1",
   "homepage": "https://github.com/yyn0210/luban-notepad-plugin-markdown",
   "license": "MulanPubL-2.0",
-  "latest_version": "2.1.0",
+  "latest_version": "2.1.1",
   "versions": [
+    {
+      "version": "2.1.1",
+      "api_version": 2,
+      "released_at": "2026-11-09T12:39:56Z",
+      "release_notes": "Adds zh-CN localization for the plugin name, description, command labels and descriptions, panel title and settings through the additive manifest localizations table. The panel title follows luban.i18n when the host provides it and falls back to English on older hosts. Translated text needs Luban Notepad 1.0.0-preview.20 or newer; older hosts keep the English strings.",
+      "artifacts": [
+        {
+          "target": "universal",
+          "url": "https://github.com/yyn0210/luban-notepad-plugin-markdown/releases/download/v2.1.1/io.github.yyn0210.markdown-preview-2.1.1.zip",
+          "sha256": "8684e834b43cbaa950bbbcf350b2b546aa8ffb59d4d910bcf4f617474f66ce36",
+          "size": 30718
+        }
+      ]
+    },
     {
       "version": "2.1.0",
       "api_version": 2,
