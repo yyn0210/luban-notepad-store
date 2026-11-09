@@ -2,7 +2,7 @@
   "$schema": "../schemas/plugin.schema.json",
   "id": "io.github.yyn0210.markdown-preview",
   "name": "Markdown Preview",
-  "description": "Rendered Markdown preview in a side panel with GFM tables, task lists, quotes and syntax-highlighted code blocks, plus heading folding and click-to-source. Refreshes while you edit; requires a plugin API v2 host (v1 hosts are not supported).",
+  "description": "VSCode/IDEA-style rendered Markdown preview in a side panel with real GFM tables, task lists, quotes, syntax-highlighted code cards and local images, plus heading folding and click-to-source. Refreshes while you edit; requires a plugin API v2 host.",
   "publisher": "yyn0210",
   "tags": [
     "markdown",
@@ -11,11 +11,25 @@
     "gfm"
   ],
   "permissions": [],
-  "source": "https://github.com/yyn0210/luban-notepad-plugin-markdown/tree/v2.0.0",
+  "source": "https://github.com/yyn0210/luban-notepad-plugin-markdown/tree/v2.1.0",
   "homepage": "https://github.com/yyn0210/luban-notepad-plugin-markdown",
   "license": "MulanPubL-2.0",
-  "latest_version": "2.0.0",
+  "latest_version": "2.1.0",
   "versions": [
+    {
+      "version": "2.1.0",
+      "api_version": 2,
+      "released_at": "2026-11-09T05:53:25Z",
+      "release_notes": "VSCode/IDEA-style preview rendering: real tables with a tinted bold header, cell borders, zebra body rows and content-weighted columns; rounded syntax-highlighted code cards; H1/H2 rules; 14px body text at 1.6 line height; continuous quote bars; local images inside the document directory; raw HTML blocks rendered as visible text. Adjacent fenced code blocks stay separate and hard breaks no longer add paragraph gaps. Link targets are hidden by default. Structured tables and image blocks need the matching host panel features and fall back gracefully on older hosts.",
+      "artifacts": [
+        {
+          "target": "universal",
+          "url": "https://github.com/yyn0210/luban-notepad-plugin-markdown/releases/download/v2.1.0/io.github.yyn0210.markdown-preview-2.1.0.zip",
+          "sha256": "aee48bd2122b31941fdd18b985ae48c28d56e8ec1560deb22e8d876ff3a987ca",
+          "size": 29903
+        }
+      ]
+    },
     {
       "version": "2.0.0",
       "api_version": 2,
@@ -62,7 +76,7 @@
   "localizations": {
     "zh-CN": {
       "name": "Markdown 预览",
-      "description": "在右侧面板渲染 Markdown：支持 GFM 表格、任务列表、引用和语法高亮代码块，以及标题折叠与点击跳转源码。随编辑自动刷新；需要插件 API v2 宿主，不再支持 v1 宿主。"
+      "description": "在右侧面板按 VSCode/IDEA 风格渲染 Markdown：真实 GFM 表格、任务列表、引用、语法高亮代码卡片和文档目录内的本地图片，支持标题折叠与点击跳转源码。随编辑自动刷新；需要插件 API v2 宿主。"
     }
   }
 }
